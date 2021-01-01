@@ -5,13 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Algo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
-    <div id="maze_container"></div>
-
-    <script src="app.js"></script>
+    <div class="row">
+        <div id="maze_container"></div>
+    </div>
+    <div clas="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="numberWidth">Width</label>
+                    <input type="number" class="form-control" id="numberWidth" min="5" max="50" value="10">
+                </div>
+                <div class="form-group col-6">
+                    <label for="numberHeight">Height</label>
+                    <input type="number" class="form-control" id="numberHeight" min="5" max="50" value="10">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rngBlockSeed">Block Seed</label>
+                <input type="range" class="form-control" id="rngBlockSeed" min="0.1" max="1.0" value="0.7" step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="rngSpeed">Speed</label>
+                <input type="range" class="form-control" id="rngSpeed" min="50" max="500" value="50">
+            </div>
+            <button type="button" class="btn btn-lg btn-primary" id="btnStart">Start</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
